@@ -1,7 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import cors from 'cors';
 
 import authRouter from './routes/authRouter.js';
 import chatRouter from './routes/chatRouter.js';
@@ -23,7 +22,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(cors());
 
 app.use('/api/auth', authRouter);
 app.use('/api/chats', chatRouter);
